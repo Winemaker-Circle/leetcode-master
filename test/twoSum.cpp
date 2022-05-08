@@ -12,7 +12,7 @@ public:
                 if (nums[i] + nums[j] == target){
                     return vector<int>({i,j});
                 }
-            }:w
+            }
         }
         return {};
     }
