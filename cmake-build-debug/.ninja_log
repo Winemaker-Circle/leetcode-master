@@ -1,0 +1,11 @@
+# ninja log v5
+1	432	6737019118032923	CMakeFiles/leetcode_master.dir/test/twoSum.cpp.obj	adc488002c897606
+434	647	6737019120108128	leetcode_master.exe	c907027d96ebd42
+6	466	6737025875608722	CMakeFiles/leetcode_master.dir/test/twoSum.cpp.obj	adc488002c897606
+466	687	6737025877928432	leetcode_master.exe	c907027d96ebd42
+5	435	6737026493995309	CMakeFiles/leetcode_master.dir/test/twoSum.cpp.obj	adc488002c897606
+436	645	6737026496035119	leetcode_master.exe	c907027d96ebd42
+4	572	6737037093040516	CMakeFiles/leetcode_master.dir/test/twoSum.cpp.obj	adc488002c897606
+573	792	6737037095214702	leetcode_master.exe	c907027d96ebd42
+4	563	6737037402102796	CMakeFiles/leetcode_master.dir/test/twoSum.cpp.obj	adc488002c897606
+563	782	6737037404247060	leetcode_master.exe	c907027d96ebd42
