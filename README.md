@@ -13,3 +13,4 @@ leetcode-master[力扣研究生群]
   - [27.Remove Element](./leetcode/0515/27.删除指定项.md)
 - [0522](./leetcode/0522)
   - [35. Search Insert Position](./leetcode/0522/35.%20Search%20Insert%20Position.md)
+  - [53. Maximum Subarray](./leetcode/0522/53.Maximum%20Subarray.md)
