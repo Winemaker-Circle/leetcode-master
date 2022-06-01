@@ -14,3 +14,5 @@ add_executable(35.SearchInsertPosition test/yzc/0526/35.SearchInsertPosition.cpp
 add_executable(BinarySearch test/yzc/common/BinarySearch.cpp)
 add_executable(53.MaximumSubarray test/yzc/0526/53.MaximumSubarray.cpp)
 add_executable(509.FibonacciNumber test/yzc/common/509.FibonacciNumber.cpp)
+add_executable(66.PlusOne test/yzc/0529/66.PlusOne.cpp)
+add_executable(88.MergeSortedArray test/yzc/0529/88.MergeSortedArray.cpp)
