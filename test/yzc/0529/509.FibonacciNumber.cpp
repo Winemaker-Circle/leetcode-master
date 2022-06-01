@@ -8,7 +8,7 @@ public:
     // Recursion O(n)
     static int fibRecursion(int N){
         if (N<2) return N;
-        fibRecursion(fibRecursion(N-1) + fibRecursion(N-2)); // 通用公式
+        return fibRecursion(N-1) + fibRecursion(N-2); // 通用公式
     }
     // 509.Fibonacci Number
     // use Dynamic Programming
@@ -23,19 +23,38 @@ public:
         vector<int> dp(N+1); // 1. 确定 dp 数组
         dp[0] = 0;
         dp[1] = 1; // 3. 初始化dp数组
-        for (int i = 0; i <= N; ++i) {  // 4. 遍历顺序
+        for (int i = 2; i <= N; ++i) {  // 4. 遍历顺序
             dp[i] = dp[i-1] + dp[i-2];  // 5. dp 数组
         }
         return dp[N];
     }
+    // DP 优化版 ： 只关注每一轮需要的值 dp[i-1] 和 dp[i-2]
+    static int fibDPSimple(int N) {
+        if (N <= 1) return N;
+        int dp[2];// 1. 确定 dp 数组
+        dp[0] = 0;
+        dp[1] = 1; // 3. 初始化dp数组
+        for (int i = 2; i <= N; ++i) {  // 4. 遍历顺序
+            int sum = dp[0] + dp[1]; // 相当于 dp[2]
+            dp[0] = dp[1];
+            dp[1] = sum;
+        }
+        return dp[1];
+    }
 };
 
 int main(){
-    vector<int> nums = {2,7,11,15};
-    int target = 9; // [0,1]
-    // 暴力破解 O(n^2)
-    vector<int> result0 = Solution::twoSumForce(nums, target);
-    cout << "[" << result0[0] << "," << result0[1] << "]" << endl;
+    int N = 3;
+    // 递归
+    int ans1 = Solution::fibRecursion(N);
+    cout << "ans1: " << ans1 << endl;
+
+    // DP
+    int ans2 = Solution::fibDP(N);
+    cout << "ans2: " << ans2 << endl;
+    // DP Simple
+    int ans3 = Solution::fibDPSimple(N);
+    cout << "ans3: " << ans3 << endl;
 
     return 0;
 }
