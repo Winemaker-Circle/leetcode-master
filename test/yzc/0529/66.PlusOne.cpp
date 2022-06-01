@@ -99,3 +99,46 @@ int main(){
 
     return 0;
 }
+}
+// 元素全为 9
+        vector<int> ans(length+1);
+        ans[0] = 1;
+        return ans;
+    }
+    // 一种比较精简的实现
+    static vector<int> plusOneCompress(vector<int> digits){
+        int length = digits.size();
+        while (length && ++digits[--length] == 10){ // 这种写法与上面原理一致，遇到9则置为0
+            digits[length] = 0;
+        }
+        if (digits[0] == 0){
+            digits.insert(begin(digits),1);
+        }
+        return digits;
+    }
+};
+void print_array(vector<int>& array){
+    cout << "[";
+    for(const auto &x : array){
+        cout << x << " ";
+    }
+    cout << "]\n";
+}
+int main(){
+//    vector<int> digits = {1,2,3,4,5,6,7,8};
+    vector<int> digits = {1,9,9};
+    cout << "origin digits is: ";
+    print_array(digits);
+    cout << "added digits is: ";
+    vector<int> added_digits = Solution::plusOne(digits);
+    print_array(added_digits);
+
+    vector<int> digits1 = {1,9,9};
+    cout << "origin digits1 is: ";
+    print_array(digits1);
+    cout << "added digits1 is: ";
+    vector<int> added_digits1 = Solution::plusOneSimple(digits1);
+    print_array(added_digits1);
+
+    return 0;
+}

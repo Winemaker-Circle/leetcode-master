@@ -7,7 +7,7 @@ class Solution {
 public:
     // Recursion O(n)
     static int fibRecursion(int N){
-        if (N<2) return N;
+        if (N<2) return N; // 跳出条件
         return fibRecursion(N-1) + fibRecursion(N-2); // 通用公式
     }
     // 509.Fibonacci Number

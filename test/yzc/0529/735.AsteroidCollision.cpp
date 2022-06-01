@@ -8,6 +8,7 @@ class Solution {
 public:
     static vector<int> asteroidCollision(vector<int> &asteroids) {
         // initial stack
+        // stack + array
         stack<int> s;
         s.push(INT_MIN); // 放入一个默认值
         cout << s.top() << endl;
@@ -72,21 +73,26 @@ int main() {
     vector<int> ast2 = {8,-8};
     vector<int> ast3 = {10,2,-5};
 
-//    vector<int> ans1 = Solution::asteroidCollision(ast1);
-//    print_array(ast1);
-//    cout << "=> ";
-//    print_array(ans1);
-//
-//    vector<int> ans2 = Solution::asteroidCollision(ast2);
-//    print_array(ast2);
-//    cout << "=> ";
-//    print_array(ans2);
+    vector<int> ans1 = Solution::asteroidCollision(ast1);
+    print_array(ast1);
+    cout << "=> ";
+    print_array(ans1);
+
+    vector<int> ans2 = Solution::asteroidCollision(ast2);
+    print_array(ast2);
+    cout << "=> ";
+    print_array(ans2);
 
     vector<int> ans3 = Solution::asteroidCollision(ast3);
     print_array(ast3);
     cout << "=> ";
     print_array(ans3);
 
+    vector<int> ast4 = {-5, 10,-5};
+    vector<int> ans4 = Solution::asteroidCollision(ast4);
+    print_array(ast4);
+    cout << "=> ";
+    print_array(ans4);
 
     return 0;
 }
