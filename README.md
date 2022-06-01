@@ -14,7 +14,7 @@ leetcode-master[力扣研究生群]
 - [0526(0522)](./leetcode/0526(0522)) (0522推迟到0526)
     - [35. Search Insert Position](leetcode/0526(0522)/35.%20Search%20Insert%20Position.md)
     - [53. Maximum Subarray](leetcode/0526(0522)/53.Maximum%20Subarray.md)
-- [0529](./leetcode/0601(0529))
+- [0601(0529)](./leetcode/0601(0529))
   - [66.Plus one](leetcode/0601(0529)/66.PlusOne.md)
   - [88.Merge Sorted Array](leetcode/0601(0529)/88.MergeSortedArray.md)
   - [509.FibonacciNumber](leetcode/0601(0529)/509.FibonacciNumber.md)
