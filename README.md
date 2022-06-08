@@ -23,3 +23,6 @@ leetcode-master[力扣研究生群]
   - [20. Valid Parentheses](leetcode/0605/20.ValidParentheses.md)
   - [136. Single Number](leetcode/0605/136.SingleNumber.md)
   - [137. Single NumberII](leetcode/0605/137.SingleNumberII.md)
+- [0612](./leetcode/0612)
+  - [118. pascals-triangle](leetcode/0612/118.pascals-triangle.md)
+  - [119. pascals-triangle-ii](leetcode/0612/119.pascals-triangle-ii.md)
