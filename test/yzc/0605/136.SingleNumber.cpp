@@ -1,23 +1,11 @@
-# 传送门：[136. Single Number](https://leetcode.cn/problems/single-number/)
----
+#include "iostream"
+#include "vector"
 
-# irving
-```python
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        num_ls = []
-        for item in nums:
-            if item in num_ls:
-                num_ls.remove(item)
-            else:
-                num_ls.append(item)
+using namespace std;
 
-        return num_ls[0]
-```
-
-# YZC
-```c++
- static int singleNumber(vector<int>& nums) {
+class Solution {
+public:
+    static int singleNumber(vector<int>& nums) {
         QuickSort(&nums[0],0,nums.size()-1);
         Solution::printArray(nums);
         for(int i = 1;i<nums.size();i++){
@@ -53,4 +41,25 @@ class Solution:
             QuickSort(arr, pivot + 1, end);
         }
     }
-```
+    // PrintArray
+    static void printArray(vector<int>& array){
+        cout << "[";
+        for(const auto &x : array){
+            cout << x << " ";
+        }
+        cout << "]\n";
+    }
+};
+void print_array(vector<int>& array){
+    cout << "[";
+    for(const auto &x : array){
+        cout << x << " ";
+    }
+    cout << "]\n";
+}
+int main(){
+//    vector<int> nums = {2,2,4,4,6,6,88,88,9,9,0,0,100};
+    vector<int> nums = {2,2,1};
+    cout << Solution::singleNumber(nums);
+    return 0;
+}

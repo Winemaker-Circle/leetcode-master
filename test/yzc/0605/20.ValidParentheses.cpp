@@ -1,33 +1,12 @@
-# 传送门：[20. Valid Parentheses](https://leetcode.cn/problems/valid-parentheses/)
----
+#include <stack>
+#include "iostream"
+#include "vector"
 
+using namespace std;
 
-# irving
-```python
-class Solution:
-    def isValid(self, s: str) -> bool:
-        if len(s) % 2 == 1:
-            return False
-
-        pairs = {
-            ")": "(",
-            "]": "[",
-            "}": "{",
-        }
-        stack = list()
-        for ch in s:
-            if ch in pairs:  # ） } 】
-                if not stack or stack[-1] != pairs[ch]:  # 空栈或者不对应都是错误的
-                    return False
-                stack.pop()  # 正常出栈
-            else:
-                stack.append(ch)
-
-        return not stack
-```
-# YZC
-```c++
-static bool isValid(string s) {
+class Solution {
+public:
+    static bool isValid(string s) {
         stack<char> stk;
         for(auto c : s) {
             // 左括号 ({[ 则入栈
@@ -49,4 +28,11 @@ static bool isValid(string s) {
         // 如果最后栈不为空，表示有多余的左括号
         return stk.empty();
     }
-```
+};
+
+int main(){
+
+    string s = "()[]{}";
+    cout << Solution::isValid(s) <<endl;
+    return 0;
+}
