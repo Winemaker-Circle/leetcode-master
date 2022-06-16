@@ -26,3 +26,8 @@ leetcode-master[力扣研究生群]
 - [0612](./leetcode/0612)
   - [118. pascals-triangle](leetcode/0612/118.pascals-triangle.md)
   - [119. pascals-triangle-ii](leetcode/0612/119.pascals-triangle-ii.md)
+- [0619](./leetcode/0619)
+  - [169.MajorityElement](leetcode/0619/169.MajorityElement.md)
+  - [217.ContainsDuplicate](leetcode/0619/217.ContainsDuplicate.md)
+  - [219.ContainsDuplicateII](leetcode/0619/219.ContainsDuplicateII.md)
+  - [228.SummaryRanges](leetcode/0619/228.SummaryRanges.md)
