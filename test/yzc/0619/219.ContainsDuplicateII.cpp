@@ -1,46 +1,20 @@
-# 传送门：[219. Contains Duplicate-II](https://leetcode.cn/problems/contains-duplicate-ii/)
----
-# Irving
-```python
-from typing import List
+#include <iostream>
+#include "vector"
+#include "unordered_map"
+#include "unordered_set"
 
-# 题目：https://leetcode.cn/problems/contains-duplicate-ii/
-# 思路：
-# 索引表:k-i(如果有等价的key对应索引之间距离 <= k,那么就可以直接正确返回)
-# class Solution:
-#     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-#         key_index = {}
-#         for index,item in enumerate(nums):
-#
-#             if item not in key_index:
-#                 # 如果没有存储
-#                 key_index[item] = index
-#             else:
-#                 if abs(key_index.get(item) - index) <= k:
-#                     return True
-#                 else:
-#                     key_index[item] = index
-#
-#         else:
-#             return False
+using namespace std;
 
-class Solution:
-    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        s = set()
-        for i, num in enumerate(nums):
-            if i > k:
-                s.remove(nums[i - k - 1])
-            if num in s:
-                return True
-            s.add(num)
-        return False
+//# 传送门：[219. Contains Duplicate-II](https://leetcode.cn/problems/contains-duplicate-ii/)
+//---
+//给你一个整数数组 nums 和一个整数k ，
+// 判断数组中是否存在两个 不同的索引i和j ，满足 nums[i] == nums[j]
+// 且 abs(i - j) <= k 。
+// 如果存在，返回 true ；否则，返回 false 。
 
-```
-
-# yzc
-
-```c++
-// 哈希表
+class Solution {
+public:
+    // 哈希表
     // 时间复杂度 O(n)  空间复杂度 O(n)
     static bool containsNearbyDuplicateHash(vector<int>& nums, int k) {
         unordered_map<int,int> map; // key 为元素值， value 为元素 (最新)索引
@@ -72,4 +46,15 @@ class Solution:
         }
         return false;
     }
-```
+};
+
+int main(){
+//    vector<int> nums = {1,2,3,1};
+//    vector<int> nums = {1,2,3,1,2,3}; // false
+    vector<int> nums = {1,0,1,1};
+    int k = 1;
+    bool ans = Solution::containsNearbyDuplicateHash(nums, k);
+    cout << ans << endl;
+
+    return 0;
+}

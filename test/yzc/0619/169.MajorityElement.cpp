@@ -1,21 +1,14 @@
-# 传送门：[169. Majority Element](https://leetcode.cn/problems/majority-element/)
----
-# Irving
-```python
-class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
-        # 哈希表
-        # counts = collections.Counter(nums)
-        # return max(counts.keys(),key=counts.get)  # 前面的列表，传入后面的列表函数
+#include <unordered_map>
+#include <iostream>
+#include "vector"
 
-        # 排序 -->取中间数
-        nums.sort()
-        return nums[len(nums) // 2]
-```
+using namespace std;
 
-# yzc
-```c++
-// 使用哈希表实现 O(n)
+// 169. 多数元素
+
+class Solution {
+public:
+    // 使用哈希表实现 O(n)
     static int majorityElementHash(vector<int>& nums) {
         unordered_map<int,int> freq;
         for(int num:nums){ // 计算频次
@@ -55,4 +48,51 @@ class Solution:
         }
         return cand_num;
     }
-```
+    // =====================================================
+    // quickSort
+    static int Partition(int *arr, int front, int end){
+        int pivot = arr[end];
+        int i = front -1;
+        for (int j = front; j < end; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                swap(&arr[i], &arr[j]);
+            }
+        }
+        i++;
+        swap(&arr[i], &arr[end]);
+        return i;
+    }
+    static void QuickSort(int *arr, int front, int end){
+        if (front < end) {
+            int pivot = Partition(arr, front, end);
+            QuickSort(arr, front, pivot - 1);
+            QuickSort(arr, pivot + 1, end);
+        }
+    }
+    static void swap(int *a, int *b){
+        int temp = *a;
+        *a = *b;
+        *b = temp;
+    }
+};
+
+int main(){
+    vector<int> nums = {3,2,3,2,2};
+
+    // 哈希表
+    int ans = Solution::majorityElementHash(nums);
+    cout << ans << endl;
+
+    // 排序法
+    int ans1 = Solution::majorityElementSort(nums);
+    cout << ans1 << endl;
+
+    // 投票法
+    int ans2 = Solution::majorityElementVote(nums);
+    cout << ans2 << endl;
+
+
+
+    return 0;
+}
