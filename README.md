@@ -37,7 +37,7 @@ leetcode-master[力扣研究生群]
   - [303.RangeSumQuery-Immutable](leetcode/0626/303.RangeSumQuery-Immutable.md)
   - [349.IntersectionOfTwoArrays](leetcode/0626/349.IntersectionOfTwoArrays.md)
   - [350.IntersectionOfTwoArraysII](leetcode/0626/350.IntersectionOfTwoArraysII.md)
-- [01710](./leetcode/0710)
+- [0710](./leetcode/0710)
   - [414.ThirdMaximumNumber](leetcode/0710/414.ThirdMaximumNumber.md)
   - [448.FindAllNumbersDisappearedInAnArray](leetcode/0710/448.FindAllNumbersDisappearedInAnArray.md)
   - [455.AssignCookies](leetcode/0710/455.AssignCookies.md)
