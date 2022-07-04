@@ -1,8 +1,16 @@
-# 传送门：[448.FindAllNumbersDisappearedInAnArray](https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/)
----
+#include <iostream>
+#include <set>
+#include "vector"
 
-# yzc
-```c++
+using namespace std;
+
+//# 传送门：[448.FindAllNumbersDisappearedInAnArray](https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/)
+//---
+// 给你一个含 n 个整数的数组 nums ，其中 nums[i] 在区间 [1, n] 内。请你找出所有在 [1, n] 范围内但没有出现在 nums 中的数字，并以数组的形式返回结果。
+// 理解：意思就是一个长度为n 的数组，里面的值一定在 [1,n]这个范围内，要找在范围中但是不在数组中的值
+// 那么这个数组必定有重复的值，占用了应该出现的值的地方，导致某个值消失了
+class Solution {
+public:
     // 集合法
     // 将所有值放入集合，遍历集合查找未出现的值
     static vector<int> findDisappearedNumbersSet(vector<int>& nums) {
@@ -52,4 +60,15 @@
         }
         return res;
     }
-```
+};
+int main(){
+    vector<int> nums = {4,3,2,7,8,2,3,1};
+
+    vector<int> ans = Solution::findDisappearedNumbers(nums);
+    for (int i = 0; i < ans.size(); ++i) {
+        cout << ans[i] << ",";
+    }
+    cout << endl;
+
+    return 0;
+}

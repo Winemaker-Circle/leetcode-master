@@ -1,8 +1,17 @@
-# 传送门：[414.ThirdMaximumNumber](https://leetcode.cn/problems/third-maximum-number/)
----
+#include <iostream>
+#include <algorithm>
+#include <set>
+#include "vector"
 
-# yzc
-```c++
+using namespace std;
+
+//# 传送门：[414.ThirdMaximumNumber](https://leetcode.cn/problems/third-maximum-number/)
+//---
+
+// 类似题目 1796. 字符串中第二大的数字
+
+class Solution {
+public:
     // 排序法 从大到小排序
     // T: O(nlogn) 主要花费在排序上了
     // S: O(logn) 排序所需空间
@@ -58,4 +67,24 @@
         // 六个减号就是自减三次，就是从end()迭代器倒数第三个值。
         return s.size() >= 3 ? *(------s.end()) : *(--s.end());
     }
-```
+};
+int main(){
+    vector<int> nums = {2, 2, 3 ,4 ,5 ,6 , 1};
+
+    // 排序法
+//    int ans = Solution::thirdMaxSort(nums);
+//    cout << ans << endl;
+
+    // 集合法
+//    int ans1 = Solution::thirdMaxSet(nums);
+//    cout << ans1 << endl;
+
+    // 变量法
+//    int ans1 = Solution::thirdMaxVar(nums);
+//    cout << ans1 << endl;
+    // Tan 法
+    int ans1 = Solution::thirdMaxTan(nums);
+    cout << ans1 << endl;
+
+    return 0;
+}
