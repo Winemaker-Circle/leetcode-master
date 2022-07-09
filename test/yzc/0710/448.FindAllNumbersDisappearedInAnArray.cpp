@@ -60,6 +60,35 @@ public:
         }
         return res;
     }
+    // 原地哈希
+    // [1,n] 将数组中的值 放到索引上。 尽可能将数值摆在对应的位置
+    static vector<int> findDisappearedNumbersLocalHash(vector<int>& nums) {
+        int n = nums.size();
+        int index = 0;
+        while (index < n){
+            if (nums[index] == index+1){ // 位置正确
+                index++;
+            } else{
+                // 重复 不处理
+                int targetIndex = nums[index] - 1;
+                if (nums[targetIndex] == nums[index]){
+                    index++;
+                    continue;
+                }
+                // 不相等 交换
+                int temp = nums[targetIndex];
+                nums[targetIndex] = nums[index];
+                nums[index] = temp;
+            }
+        }
+        vector<int> ans;
+        for (int i = 0; i < n; ++i) {
+            if (nums[i] != i+1){
+                ans.push_back(i+1);
+            }
+        }
+        return ans;
+    }
 };
 int main(){
     vector<int> nums = {4,3,2,7,8,2,3,1};
