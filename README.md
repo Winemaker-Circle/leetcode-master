@@ -58,3 +58,7 @@ leetcode-master[力扣研究生群]
 - [0731](./leetcode/0731)
   - [205.Isomorphic Strings](leetcode/0731/205.IsomorphicStrings.md)
   - [242.Valid Anagram](leetcode/0731/242.ValidAnagram.md)
+  - [257.BinaryTreePaths](leetcode/0731/257.BinaryTreePaths.md)
+  - [290.WordPattern](leetcode/0731/290.WordPattern.md)
+  - [344.ReverseString](leetcode/0731/344.ReverseString.md)
+  - [345.ReverseVowelsOfAString](leetcode/0731/345.ReverseVowelsOfAString.md)
