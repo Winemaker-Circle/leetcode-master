@@ -1,4 +1,4 @@
 欢迎留言！
 Github徽章成就
-youzhengcai@gmail.com
-im.lauson@gmail.com
+Co-authored-by: Skyzc youzhengcai@gmail.com 
+Co-authored-by: Lauson im.lauson@gmail.com 
