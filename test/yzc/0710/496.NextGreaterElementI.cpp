@@ -1,43 +1,14 @@
-# 传送门：[496. Next Greater Element I](https://leetcode.cn/problems/next-greater-element-i/)
----
-# yLL
-```Python
-class Solution:
-    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        # nums->index  -> index+1 f
-        # 暴力破解
-        # m, n = len(nums1), len(nums2)
-        # res = [0] * m
-        # for i in range(m):
-        #     j = nums2.index(nums1[i])
-        #     k = j + 1
-        #     while k < n and nums2[k] < nums2[j]:
-        #         k += 1
-        #     res[i] = nums2[k] if k < n else -1
-        # return res
+#include <iostream>
+#include <set>
+#include <unordered_map>
+#include <stack>
+#include "vector"
 
-        #栈+hash( 求列表中第一个大的数，第一个小的数都可以用这个 )
+using namespace std;
 
-        # 存放结果的hash表
-        res={}
-        stack = []
-
-        for num in reversed(nums2):
-            # 栈不是空，并且录入的元素大于栈顶，就要出战置换
-            while stack and num >= stack[-1]:
-                stack.pop()
-
-            # 栈存在就是 栈顶，不存在就是 -1
-            res[num] = stack[-1] if stack else -1 # 三目表达式
-            stack.append(num)
-
-        # key为nums1的里列表中的value
-        return [res[num] for num in nums1]
-```
-
-# yzc
-```c++
-// 暴力破解
+class Solution {
+public:
+    // 暴力破解
     static vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
         int m = nums1.size();
         int n = nums2.size();
@@ -75,4 +46,10 @@ class Solution:
         }
         return res;
     }
-```
+};
+int main(){
+    vector<int> nums1 = {4,1,2};
+    vector<int> nums2 = {1,3,4,2};
+
+    return 0;
+}

@@ -1,3 +1,4 @@
+//# 传送门：[345.Reverse Vowels of a String](https://leetcode.cn/problems/reverse-vowels-of-a-string)
 #include "iostream"
 #include "vector"
 
@@ -9,14 +10,6 @@ public:
         return {};
     }
 };
-
-void print_array(vector<int>& array){
-    cout << "[";
-    for(const auto &x : array){
-        cout << x << " ";
-    }
-    cout << "]\n";
-}
 
 int main(){
     vector<int> nums = {2,7,11,15};

@@ -1,7 +1,11 @@
-# 传送门：[205.IsomorphicStrings.md](https://leetcode.cn/problems/isomorphic-strings/)
+//# 传送门：[205.IsomorphicStrings.md](https://leetcode.cn/problems/isomorphic-strings/)
+#include <unordered_map>
+#include "iostream"
 
-# yzc
-```c++
+using namespace std;
+
+class Solution {
+public:
     // ❌ 未考虑 t->s
     static bool isIsomorphic(string s, string t) {
         // 1. 定义一个 map 用于存放 s->t 的映射
@@ -86,4 +90,18 @@
         }
         return true;
     }
-```
+};
+
+int main(){
+    string s = "paper";
+    string t = "title";
+    int ans = Solution::isIsomorphic(s, t); // ture
+    cout << ans << endl;
+
+    string s1 = "badc";
+    string t1 = "baba";
+    int ans1 = Solution::isIsomorphicDouble(s1, t1); // false
+    cout << ans1 << endl;
+
+    return 0;
+}
